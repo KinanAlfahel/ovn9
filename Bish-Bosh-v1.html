@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Class | Bish-Bosh V1.0</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JQuery 3.5.1 library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap 4.5.2 library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!--<a class="navbar-brand" href="#">Logo</a>-->
+        <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">Bish-Bosh</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item active" href="Bish-Bosh-v1.html">V1.0</a>
+                    <a class="dropdown-item" href="Bish-Bosh-v2.html">V2.0</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="todo-list.html">To-Do List</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+        <h2>JS Bish-Bosh V1.0</h2>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            console.clear();
+
+            //$("p").click(function () {
+            //    $(this).hide();
+            //});
+
+            var bbArray = [];
+            for (let i = 1; i <= 100; i++) {
+                bbArray.push(i);
+            }
+
+            bbArray.forEach(myFunction);
+
+            function myFunction(bbNumber) {
+                var msg = bbNumber;
+                if (bbNumber % 3 == 0) {
+                    msg = "Bish";
+                }
+                if (bbNumber % 4 == 0) {
+                    msg = "Bosh";
+                }
+                if (bbNumber % 3 == 0 && bbNumber % 4 == 0) {
+                    msg = "Bish-Bosh";
+                }
+
+                console.log(msg);
+            }
+
+        });
+    </script>
+</body>
+</html>
